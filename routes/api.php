@@ -133,3 +133,13 @@ Route::get('aumento', function(Request $request){
 
     return 'salario fixo que recebe é de ' . $salario . 'R$, o aumento sera de ' . $aumento . '% ,total do salario sera ' . $resultado2;
 });
+
+Route::get('pontos', function(Request $request){
+
+    $valorcompras = $request->input('valor');
+    $resultado = $valorcompras / 10;
+
+    return 'seu valor gasto é de ' . $valorcompras . ' ,ficara com ' . $resultado;
+
+});
+
