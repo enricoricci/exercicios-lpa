@@ -152,3 +152,17 @@ Route::get('comissao', function(Request $request){
 
 });
 
+Route::get('dias', function(Request $request){
+    $dias = $request->input('dia');
+
+    $horas = $dias * 24;
+
+    $min = $horas * 60;
+
+    $segundos = $min * 60;
+
+    return 'total de dias foram ' . $dias . ', total de horas foram ' . $horas . ', total de minutos foram ' . $min . ', total de segundos foram ' . $segundos;
+
+});
+
+
