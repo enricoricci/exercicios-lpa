@@ -46,3 +46,14 @@ Route::get('subtração', function(Request $request){
     return $media;
 
 });
+
+Route::get('divisão', function(Request $request){
+    
+    $primeiraEntrada = $request->input('primeiraNumero');
+    $segundaEntrada = $request->input('SegundaNumero');
+    
+ 
+    $resultado = ($primeiraEntrada / $segundaEntrada);
+    return $resultado;
+
+});
