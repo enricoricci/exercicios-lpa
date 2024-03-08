@@ -83,3 +83,14 @@ Route::get('media', function(Request $request){
     return $resultado;
   
 });
+
+Route::get('divisão', function(Request $request){
+    
+    $primeiraEntrada = $request->input('primeiraNumero');
+    $segundaEntrada = $request->input('SegundaNumero');
+    
+ 
+    $resultado = ($segundaEntrada / $primeiraEntrada);
+    return $resultado;
+
+});
