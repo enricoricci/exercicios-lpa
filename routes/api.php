@@ -123,3 +123,13 @@ Route::get('desconto', function(Request $request){
     return 'o preço do produto custa ' . $produto . ' ,com o desconto de ' . $desconto . '% ,ficara ' . $resultado2;
     
 }); 
+
+Route::get('aumento', function(Request $request){
+
+    $salario = $request->input('salario');
+    $aumento = $request->input('aumento');
+    $resultado = $aumento / 100 * $salario;
+    $resultado2 = $salario + $resultado;
+
+    return 'salario fixo que recebe é de ' . $salario . 'R$, o aumento sera de ' . $aumento . '% ,total do salario sera ' . $resultado2;
+});
