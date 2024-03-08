@@ -94,3 +94,12 @@ Route::get('divisão', function(Request $request){
     return $resultado;
 
 });
+
+Route::get('divisão', function(Request $request){
+    $primerioNumero = $request->input('numero');
+    $resultado = $primerioNumero * '2';
+
+    return ' O dobro do número ' . $primerioNumero . ' é ' . $resultado; 
+
+});
+
