@@ -68,3 +68,18 @@ Route::get('multiplicação', function(Request $request){
     return $resultado;
 
 });
+
+Route::get('media', function(Request $request){
+    
+    $primeiraEntrada = $request->input('primeiraNumero');
+    $segundaEntrada = $request->input('SegundaNumero');
+    $terceiraEntrada = $request->input('terceiraNumero');
+    $quartaEntrada = $request->input('quartonumero');
+    $quintaEntrada = $request->input('quintonumero');
+
+    $resultado = ($primeiraEntrada + $segundaEntrada + $terceiraEntrada + $quartaEntrada 
+    + $quintaEntrada) /'5';
+
+    return $resultado;
+  
+});
