@@ -103,3 +103,12 @@ Route::get('divisão', function(Request $request){
 
 });
 
+Route::get('area', function(Request $request){
+    
+    $baseRetangulo = $request->input('base');
+    $alturaRetangulo = $request->input('altura');
+
+    $area = $baseRetangulo * $alturaRetangulo;
+    return $area;
+
+});
