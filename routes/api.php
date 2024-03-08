@@ -165,4 +165,16 @@ Route::get('dias', function(Request $request){
 
 });
 
+Route::get('quantidade', function(Request $request){
+
+    $preço = $request->input('preço'); 
+
+    $produtos = $request->input('quantidade');
+
+    $resultado = $preço * $produtos;
+    
+    return 'valor total vai ser de ' . $resultado;
+
+});
+
 
