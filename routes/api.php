@@ -178,3 +178,95 @@ Route::get('quantidade', function(Request $request){
 });
 
 
+Route::get('verifica/idade', function(Request $request){
+     $idade = $request->input('idade');
+    
+     if($idade >= 18){
+         return "maior de idade";
+     } else {
+        return "menor de idade";
+     }
+
+});
+
+Route::get('verificar/par', function(Request $request){
+    $numero = $request->input('numero');
+    
+    if($numero % 2 == 0){
+        return 'par';
+    } else {
+        return 'impar';
+    }
+    
+    
+});
+
+Route::get('numero', function(Request $request){
+    $numero = $request->input('numero');
+
+    if($numero > 10){
+        return 'maior que 10';
+    } else {
+        return 'menor que 10';
+    }
+
+});
+
+Route::get('numero1', function(Request $request){
+    
+    $graus = $request->input('graus');
+    
+    if($graus > 30){
+        return 'a temperatura atual esta ' . $graus . 'C, esta quente';
+    } else {
+        return 'a temperatura atua é de ' . $graus . 'C ';
+           }
+
+});
+
+Route::get('numero2', function(Request $request){
+
+    $numero = $request->input('numero');
+
+    if($numero > 0){
+        return 'o numero ' . $numero . ' e positivo';
+    } else if($numero == 0){
+        return 'esse numero é zero';
+    } else if($numero < 0){
+        return 'o numero ' . $numero . ' e negativo';
+    }
+    
+    });
+
+Route::get('numero3', function(Request $request){
+
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+
+    if($numero1 > $numero2){
+        return 'o numero ' . $numero1 . ' é mais que o numero ' . $numero2;
+     } else {
+        return 'o numero ' . $numero1 . ' é menor que o numero ' . $numero2;
+     }
+
+    });
+
+ Route::get('verifica/divisivel', function (Request $request){
+
+        $numero = $request->input('numero');
+        if($numero % 3 == 0){
+         return 'O número ' . $numero . " é divisivel por 3";
+        } else{
+         return 'O número ' . $numero . " não é divisivel por 3";
+        }
+     
+     });
+
+     
+
+
+
+
+
+
+
