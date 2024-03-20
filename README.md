@@ -34,7 +34,7 @@ code .
 ```
 5. Acessar o Visual Studio code
 ```
-php artisan serve --port=80code .
+php artisan serve --port=80
 ```
 6. Importar o arquivo do Insomnia
 
