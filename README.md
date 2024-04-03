@@ -7,7 +7,7 @@ Esta projeto contém uma série de exercicios práticos para tabalhar com API e 
 ##  Requisitos 
 
 certifique-se de ter os seguintes requisitos antendidos antes de começar a trabalhar nos exercicios:
-* PHP isntataldo/Xampp instalado
+* PHP instataldo/Xampp instalado
 * Composer instalado
 * 7-Zip instalado
 * Git instalado
