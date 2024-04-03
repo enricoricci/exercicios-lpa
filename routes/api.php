@@ -467,3 +467,78 @@ Route::get('exercicio18', function (Request $request){
             }
 
 });
+
+
+Route::get('ex1', function (Request $request){
+    $numero1 = $request->input('num1');
+    $numero2 = $request->input('num2');
+    $numero3 = $request->input('num3');
+    $resultado= $numero1 + $numero2 + $numero3 / 3;
+
+    if ($resultado >7){
+        return "aprovado";
+    }else{
+        return "reprovado";
+    }
+    
+
+});
+
+Route::get('ex2', function (Request $request){
+    $numero1 = $request->input('num1');
+  
+    if($numero1 <=1900 ){
+      return 'isento de imposto';
+    }
+
+    if($numero1 >= 1901){
+        if($numero1 <2800){
+            $calculo1 = 7 / 100 * $numero1;
+            $calculo2 = $numero1 - $calculo1;
+            return 'voce tem aliquota de 7% sendo voltado ' . $calculo2;
+
+        } }
+         
+        if($numero1 >=2801 ){
+            if($numero1 <3700){
+                $calculo3 = 15 / 100 * $numero1;
+                $calculo4 = $numero1 - $calculo3;
+                return 'voce tem aliquota de 15% sendo voltado ' . $calculo4;
+            
+            }}
+
+
+                if($numero1 >=3700 ){
+                    $calculo5 = 22 / 100 * $numero1;
+                    $calculo6 = $numero1 - $calculo5;
+                    return 'voce tem aliquota de 22% sendo voltado ' . $calculo6;
+                }
+    });
+
+    Route::get('ex3', function (Request $request){
+        $numero1 = $request->input('ano');
+
+        if($numero1 % 4 == 0){
+            return 'esse ano e bissextos';
+        }else{
+            return 'esse ano não e bissextos';
+        }
+        
+    
+    });
+
+    Route::get('ex3', function (Request $request){
+        $numero1 = $request->input('valor');
+
+        if ($numero1 > 1000){
+            $calculo1 = 15 / 100 * $numero1;
+            $calculo2 = $numero1 - $calculo1;
+            return 'voce passou de 1000 reais de compra você ganhara 15% de desconto, sua compra ficara' . $calculo2;
+        }
+
+    });
+
+
+
+
+
