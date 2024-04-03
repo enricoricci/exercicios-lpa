@@ -375,3 +375,28 @@ Route::get('exercicio11', function (Request $request){
 
     return 'o resultado é ' . $resultado;
     });
+
+    Route::get('exercicio12', function (Request $request){
+        $numero1 = $request->input('num1');
+        $numero2 = $request->input('num2');
+
+        $resultado = $numero1 * $numero2;
+        if ($resultado >100){
+        return 'o resultado ' . $resultado . ' é maior que 100';
+        }else {
+        return 'o resultado é ' . $resultado;
+        }
+   
+        });
+
+        Route::get('exercicio13', function (Request $request){
+            $numero1 = $request->input('num1');
+            $numero2 = $request->input('num2');
+            $resultado = $numero1 + $numero2;
+            if ($resultado % 2 ==0){
+                return $numero1 * $numero2;
+            }else if ($resultado % 2 !=0){
+                return ($numero1 / $numero2);
+            }
+
+});
