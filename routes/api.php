@@ -238,7 +238,61 @@ Route::get('verifica/divisivel', function (Request $request) {
     }
 });
 
+
+
 Route::get('exercicio1', function (Request $request) {
+    $numero = $request->input('numero');
+
+    if ($numero > 10) {
+        return 'maior que 10';
+    } else {
+        return 'menor que 10';
+    }
+});
+
+Route::get('exercicio2', function (Request $request) {
+    $numero = $request->input('numero');
+
+    if ($numero > 10) {
+        return 'maior que 10';
+    } else {
+        return 'menor que 10';
+    }
+});
+
+Route::get('exercicio3', function (Request $request) {
+    $idade = $request->input('idade');
+
+    if ($idade >= 18) {
+        return "maior de idade";
+    } else {
+        return "menor de idade";
+    }
+});
+
+Route::get('exercicio4', function (Request $request) {
+    $numero = $request->input('numero');
+
+    if ($numero % 2 == 0) {
+        return 'par';
+    } else {
+        return 'impar';
+    }
+});
+
+Route::get('exercicio5', function (Request $request) {
+
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+
+    if ($numero1 > $numero2) {
+        return 'o numero ' . $numero1 . ' é mais que o numero ' . $numero2;
+    } else {
+        return 'o numero ' . $numero1 . ' é menor que o numero ' . $numero2;
+    }
+});
+
+Route::get('exercicio6', function (Request $request) {
     $numero = $request->input('numero');
     if ($numero % 9 == 0) {
         return 'O número ' . $numero . " é divisivel por 9";
@@ -247,7 +301,20 @@ Route::get('exercicio1', function (Request $request) {
     }
 });
 
-Route::get('exercicio2', function (Request $request) {
+Route::get('exercicio7', function (Request $request) {
+
+    $graus = $request->input('graus');
+
+    if ($graus > 30) {
+        return 'a temperatura atual esta ' . $graus . 'C, esta quente';
+    } else {
+        return 'a temperatura atua é de ' . $graus . 'C ';
+    }
+});
+
+
+
+Route::get('exercicio8', function (Request $request) {
     $numero = $request->input('numero');
     if ($numero * 7 == 0) {
         return 'O número ' . $numero .  ' é multiplo por 7, que é igual a ' . 7 * $numero;
@@ -256,7 +323,7 @@ Route::get('exercicio2', function (Request $request) {
     }
 });
 
-Route::get('exercicio3', function (Request $request) {
+Route::get('exercicio9', function (Request $request) {
 
     $graus = $request->input('idade');
 
@@ -267,7 +334,7 @@ Route::get('exercicio3', function (Request $request) {
     }
 });
 
-Route::get('exercicio4', function (Request $request) {
+Route::get('exercicio10', function (Request $request) {
 
     $numero = $request->input('numero');
     if ($numero > 0) {
@@ -277,7 +344,7 @@ Route::get('exercicio4', function (Request $request) {
     }
 });
 
-Route::get('exercicio5', function (Request $request) {
+Route::get('exercicio11', function (Request $request) {
     $numero1 = $request->input('numero1');
 
 
@@ -290,7 +357,7 @@ Route::get('exercicio5', function (Request $request) {
     }
 });
 
-Route::get('exercicio6', function (Request $request) {
+Route::get('exercicio12', function (Request $request) {
     $numero = $request->input('numero');
     if ($numero % 6 == 0) {
         return 'O número ' . $numero . " é divisivel por 6";
@@ -299,7 +366,7 @@ Route::get('exercicio6', function (Request $request) {
     }
 });
 
-Route::get('exercicio7', function (Request $request) {
+Route::get('exercicio13', function (Request $request) {
     $nome = $request->input('nome');
 
     if ($nome == 'Alice') {
@@ -307,7 +374,7 @@ Route::get('exercicio7', function (Request $request) {
     }
 });
 
-Route::get('exercicio8', function (Request $request){
+Route::get('exercicio14', function (Request $request){
     $idade = $request->input('idade');
     $carteira = $request->input('carteira');
     if ($idade > 18) {
@@ -328,7 +395,7 @@ Route::get('exercicio8', function (Request $request){
 
 });
 
-Route::get('exercicio9', function (Request $request){
+Route::get('exercicio16', function (Request $request){
 
         $numero1 = $request->input('numero1');
         $numero2 = $request->input('numero2');
@@ -345,7 +412,7 @@ Route::get('exercicio9', function (Request $request){
 
 }); 
 
-Route::get('exercicio10', function (Request $request){
+Route::get('exercicio17', function (Request $request){
     $idade = $request->input('idade');
     $nome = $request->input('nome');
 
@@ -359,7 +426,7 @@ Route::get('exercicio10', function (Request $request){
 
 });
 
-Route::get('exercicio11', function (Request $request){
+Route::get('exercicio18', function (Request $request){
     $numero1 = $request->input('num1');
     $numero2 = $request->input('num2');
     
@@ -376,7 +443,7 @@ Route::get('exercicio11', function (Request $request){
     return 'o resultado é ' . $resultado;
     });
 
-    Route::get('exercicio12', function (Request $request){
+    Route::get('exercicio19', function (Request $request){
         $numero1 = $request->input('num1');
         $numero2 = $request->input('num2');
 
@@ -389,7 +456,7 @@ Route::get('exercicio11', function (Request $request){
    
         });
 
-        Route::get('exercicio13', function (Request $request){
+        Route::get('exercicio20', function (Request $request){
             $numero1 = $request->input('num1');
             $numero2 = $request->input('num2');
             $resultado = $numero1 + $numero2;
